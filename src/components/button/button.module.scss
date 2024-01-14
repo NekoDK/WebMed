@@ -1,0 +1,53 @@
+@import '../../variables.scss';
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 56px;
+  border-radius: 55px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid $blue;
+  color: $blue;
+  background-color: white;
+
+  &:hover {
+    color: darken($blue, 10);
+  }
+
+  .content {
+    margin-left: 16px;
+  }
+
+  .horizontalContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  .horizontalContainer span {
+    padding-right: 10px;
+  }
+
+  .emptyContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  .emptyContainer span {
+    padding-right: 0;
+  }
+
+  &.primary {
+    background-color: $blue;
+    color: #FFF;
+    border: 0;
+
+    &:hover {
+      background-color: darken($blue, 10);
+    }
+  }
+}

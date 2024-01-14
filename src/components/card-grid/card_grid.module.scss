@@ -1,0 +1,68 @@
+@import '../../variables.scss';
+
+.cardGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 75px $defaultPadding;
+  align-items: center;
+  color: $lightGray;
+  text-align: center;
+  overflow: hidden;
+
+  @media (max-width: $breakpointS) {
+    padding: 50px 30px;
+  }
+
+  .background {
+    position: absolute;
+    z-index: -1;
+    max-width: 100%;
+    margin-top: 190px;
+
+    &.left {
+      left: 0;
+    }
+
+    &.right {
+      margin-top: 120px;
+      right: 0;
+    }
+
+    @media (max-width: $breakpointS) {
+      margin-top: 275px;
+    }
+
+    @media (min-width: $breakpointS) and (max-width: $breakpointM) {
+      margin-top: 215px;
+    }
+  }
+
+  .title {
+    font-size: 36px;
+    font-weight: 700;
+    color: $black;
+  }
+
+  hr {
+    width: 60px;
+    border-bottom: 1px solid $black;
+  }
+
+  .description {
+    font-size: 18px;
+    padding: 0 8%;
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .button {
+    margin-top: 20px;
+  }
+}
