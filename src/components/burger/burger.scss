@@ -1,0 +1,42 @@
+@import '../../variables.scss';
+
+.bm-burger-button {
+  position: relative;
+  width: $burgerWidth;
+  height: $burgerHeight;
+}
+
+.bm-burger-bars {
+  background: $lightGray;
+}
+
+.bm-burger-bars-hover {
+  background: $black;
+}
+
+.bm-cross {
+  background: $black;
+}
+
+.bm-menu-wrap {
+  top: 0;
+  right: 0;
+}
+
+.bm-menu {
+  background: white;
+}
+
+.bm-item-list {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.bm-overlay {
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3);
+}

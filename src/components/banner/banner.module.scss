@@ -1,0 +1,64 @@
+@import '../../variables.scss';
+
+.banner {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  padding: 75px $defaultPadding;
+  gap: 50px;
+  align-items: center;
+
+  &.reverse {
+    flex-wrap: wrap;
+  }
+
+  .dots {
+    position: absolute;
+    align-self: start;
+    left: -30px;
+
+    &.reverse {
+      align-self: end;
+      right: 0;
+      left: auto;
+    }
+
+    @media (max-width: $breakpointS) {
+      display: none;
+    }
+  }
+
+  .stack {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: $lightGray;
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 32px;
+
+    .title {
+      color: black;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 56px;
+    }
+
+    hr {
+      margin-left: 0;
+      width: 60px;
+      border-bottom: 1px solid $black;
+    }
+  }
+
+  .illustration {
+    flex: 1.4;
+    max-width: 100%;
+    height: auto;
+
+    img {
+      width: 100%;
+      min-width: 300px;
+    }
+  }
+}

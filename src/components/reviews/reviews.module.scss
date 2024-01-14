@@ -1,0 +1,130 @@
+@import '../../variables.scss';
+
+.reviews {
+  margin: 75px $defaultPadding;
+
+  .dots {
+    margin-top: 200px;
+    margin-left: -85px;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background: $gradientBlue;
+    color: white;
+    border-radius: 24px;
+    gap: 30px;
+    align-items: center;
+    position: relative;
+    min-height: 300px;
+
+    .dots {
+      position: absolute;
+      margin-top: -45px;
+      right: -50px;
+      z-index: 1;
+    }
+
+    .title {
+      font-size: 36px;
+      font-weight: 700;
+    }
+
+    hr {
+      width: 60px;
+      border-bottom: 1px solid white;
+    }
+
+    .review {
+      animation: 1s review;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 50px;
+
+      .profile {
+        min-width: 200px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        gap: 20px;
+
+        @media (max-width: $breakpointM) {
+          text-align: center;
+        }
+
+        .name {
+          font-size: 22px;
+          font-weight: 700;
+          line-height: 48px;
+        }
+
+        .picture {
+          width: 128px;
+          height: 128px;
+          border-radius: 64px;
+          border: 4px solid white;
+        }
+      }
+
+      .thought {
+        flex: 1;
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 32px;
+        font-style: normal;
+      }
+
+      .empty {
+        width: 100%;
+        font-size: 24px;
+        text-align: center;
+        margin-top: 60px;
+      }
+    }
+  }
+
+  .controls {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    .arrow {
+      padding: 60px;
+      opacity: 0.4;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+    .control {
+      opacity: 0.4;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .control {
+      background-color: $blue;
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+}
